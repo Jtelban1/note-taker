@@ -12,12 +12,15 @@ app.use(express.static("public"));
 app.get("/notes", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/public/notes.html"));
 });
-/*app.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname + "/public/index.html"));
-});*/
-
-// Append api routes
-
 new api(app);
+
+
+app.get("*", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/public/index.html"));
+});
+
+
+
+
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
