@@ -18,7 +18,7 @@ class Api{
     assignNewId(notes){
         let notesCopy = [...notes];
         let lastEntry = notesCopy.pop();
-        let nextId = 1;
+        let nextId = 1;ç
         if(typeof lastEntry !== 'undefined'){
           nextId = lastEntry.id + 1;
         }
